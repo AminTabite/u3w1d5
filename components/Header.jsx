@@ -7,7 +7,13 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import { BsGrid3X3, BsGrid } from "react-icons/bs";
+import {
+  BsGrid3X3,
+  BsGrid,
+  BsSearch,
+  BsBell,
+  BsPersonCircle,
+} from "react-icons/bs";
 
 const header = () => {
   return (
@@ -34,20 +40,20 @@ const header = () => {
               <Nav.Link href="#action2">My List</Nav.Link>
             </Nav>
             <Form className="d-flex">
-              <div className="d-flex align-items-center gap-3">
-                <i className="bi bi-search icons"></i>
+              <div className="d-flex align-items-center px-2">
+                <BsSearch className="icons" />
                 <div id="kids" className="fw-bold">
                   KIDS
                 </div>
-                <i className="bi bi-bell icons"></i>
-                <i className="bi bi-person-circle icons"></i>
+                <BsBell className="icons" />
+                <BsPersonCircle className="icons" />
               </div>
             </Form>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <Container>
-        <Row className="d-flex justify-content-between mt-5">
+      <Container fluid className="bg-dark text-light">
+        <Row className="d-flex justify-content-between ">
           <Col xs={2} lg={3}>
             <div className="d-flex">
               <h2 className="">TV SHOWS</h2>{" "}

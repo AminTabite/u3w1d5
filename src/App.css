@@ -1,3 +1,12 @@
 .navbar .nav-link {
   color: white !important;
 }
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer p {
+  color: white;
+}
