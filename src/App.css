@@ -10,3 +10,18 @@ footer a {
 footer p {
   color: white;
 }
+
+.gallery-bg {
+  background-color: #212529;
+  padding: 20px;
+  min-height: 100vh;
+  border: 0;
+}
+
+.positioning {
+  margin: 10px;
+}
+
+.icons {
+  margin: 5px;
+}

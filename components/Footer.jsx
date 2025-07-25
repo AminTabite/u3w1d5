@@ -7,7 +7,7 @@ const Footer = () => {
     <>
       <footer>
         <Container fluid className="bg-dark text-light">
-          <Row className="justify-content-center mt-5">
+          <Row className="justify-content-center pb-4">
             <Col xs={12} md={6} className="text-center">
               <Row>
                 <Col className="mb-2 d-flex justify-content-start">

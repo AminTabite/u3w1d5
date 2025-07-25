@@ -1,0 +1,10 @@
+.Sizecard {
+  height: 100%;
+}
+
+.img-fixed {
+  object-fit: cover !important ;
+  object-position: center !important;
+  height: 400px !important;
+  width: 250px !important;
+}

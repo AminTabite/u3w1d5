@@ -4,7 +4,7 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-
+import Dropdown from "react-bootstrap/Dropdown";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import {
@@ -27,7 +27,11 @@ const header = () => {
               src="../assets/logo.png"
             />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarScroll" />
+          <Navbar.Toggle
+            style={{ borderColor: "white" }}
+            aria-controls="navbarScroll"
+            className="text-white"
+          />
           <Navbar.Collapse id="navbarScroll">
             <Nav
               className="me-auto my-2 my-lg-0"
@@ -39,14 +43,14 @@ const header = () => {
               <Nav.Link href="#action2">Recently Added</Nav.Link>
               <Nav.Link href="#action2">My List</Nav.Link>
             </Nav>
-            <Form className="d-flex">
-              <div className="d-flex align-items-center px-2">
-                <BsSearch className="icons" />
+            <Form className="d-flex ">
+              <div className="d-flex align-items-center px-2 ">
+                <BsSearch className="icons positioning" />
                 <div id="kids" className="fw-bold">
                   KIDS
                 </div>
-                <BsBell className="icons" />
-                <BsPersonCircle className="icons" />
+                <BsBell className="icons positioning" />
+                <BsPersonCircle className="icons positioning" />
               </div>
             </Form>
           </Navbar.Collapse>
@@ -56,27 +60,29 @@ const header = () => {
         <Row className="d-flex justify-content-between ">
           <Col xs={2} lg={3}>
             <div className="d-flex">
-              <h2 className="">TV SHOWS</h2>{" "}
-              <NavDropdown title="Genres" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
-                </NavDropdown.Item>
+              <h2 style={{ margin: 0, padding: 0 }}>TV SHOWS</h2>
+              <NavDropdown
+                className="positioning"
+                title="Genres"
+                id="basic-nav-dropdown"
+                style={{
+                  border: "none",
+                  boxShadow: "none",
+                  backgroundColor: "transparent",
+                  paddingLeft: "10px",
+                }}>
+                <NavDropdown.Item href="#action/3.1">Fantasy</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">Horror</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">Action</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
               </NavDropdown>
             </div>
           </Col>
           <Col xs={2} lg={3}>
             {" "}
             <div>
-              <BsGrid3X3 color="white" />
-              <BsGrid color="white" />
+              <BsGrid3X3 color="white" className="positioning" />
+              <BsGrid color="white" className="positioning" />
             </div>
           </Col>
         </Row>

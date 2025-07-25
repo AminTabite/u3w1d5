@@ -4,16 +4,16 @@ import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-const endpoint1 =
-  "https://www.omdbapi.com/?i=tt3896198&apikey=7e50598d&s=supernatural";
+const endpoint2 =
+  "https://www.omdbapi.com/?i=tt3896198&apikey=7e50598d&s=Halloween";
 
-class Gallery1 extends Component {
+class Gallery2 extends Component {
   state = {
     movies: [],
   };
 
   loadMovies = () => {
-    fetch(endpoint1)
+    fetch(endpoint2)
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -66,4 +66,4 @@ class Gallery1 extends Component {
   }
 }
 
-export default Gallery1;
+export default Gallery2;
