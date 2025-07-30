@@ -14,8 +14,10 @@ import {
   BsBell,
   BsPersonCircle,
 } from "react-icons/bs";
+import { Link, useLocation } from "react-router-dom";
 
-const header = () => {
+const Header = () => {
+  const location = useLocation();
   return (
     <>
       <Navbar expand="lg" className="bg-dark text-light">
@@ -37,11 +39,22 @@ const header = () => {
               className="me-auto my-2 my-lg-0"
               style={{ maxHeight: "100px" }}
               navbarScroll>
-              <Nav.Link href="#action1">Home</Nav.Link>
-              <Nav.Link href="#action2">Tv Shows</Nav.Link>
-              <Nav.Link href="#action2">Movies</Nav.Link>
-              <Nav.Link href="#action2">Recently Added</Nav.Link>
-              <Nav.Link href="#action2">My List</Nav.Link>
+              <Link
+                className={
+                  location.pathname === "/" ? "nav-link active" : "nav-link"
+                }
+                to="/">
+                Home
+              </Link>
+              <Link
+                className={
+                  location.pathname === "/tvShow"
+                    ? "nav-link active"
+                    : "nav-link"
+                }
+                to="/tvShow">
+                TvShow
+              </Link>
             </Nav>
             <Form className="d-flex ">
               <div className="d-flex align-items-center px-2 ">
@@ -71,9 +84,24 @@ const header = () => {
                   backgroundColor: "transparent",
                   paddingLeft: "10px",
                 }}>
-                <NavDropdown.Item href="#action/3.1">Fantasy</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Horror</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Action</NavDropdown.Item>
+                <NavDropdown.Item
+                  as={Link}
+                  to="/gallery-one"
+                  active={location.pathname === "/gallery-one"}>
+                  Gallery 1
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  as={Link}
+                  to="/gallery-two"
+                  active={location.pathname === "/gallery-one"}>
+                  Gallery 2
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  as={Link}
+                  to="/gallery-three"
+                  active={location.pathname === "/gallery-one"}>
+                  Gallery 3
+                </NavDropdown.Item>
                 <NavDropdown.Divider />
               </NavDropdown>
             </div>
@@ -91,4 +119,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;

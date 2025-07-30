@@ -25,3 +25,7 @@ footer p {
 .icons {
   margin: 5px;
 }
+
+#root {
+  background-color: #212529;
+}
