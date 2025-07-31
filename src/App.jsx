@@ -7,13 +7,14 @@ import Gallery2 from "../components/Gallery2";
 import Gallery3 from "../components/Gallery3";
 import Tvshow from "../components/Tvshow";
 import MovieDetails from "../components/MovieDetails";
-
+import Home from "../components/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <BrowserRouter>
       <Header />
       <Routes>
+        <Route path="/" element={<Home />}></Route>
         <Route path="/gallery-one" element={<Gallery1 />} />
         <Route path="/gallery-two" element={<Gallery2 />} />
         <Route path="/gallery-three" element={<Gallery3 />} />
